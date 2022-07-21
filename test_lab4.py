@@ -12,8 +12,6 @@ class Calculator:
     
     def multiply(self, a, b):
         return round(a*b, 2)
-        
-calc = Calculator("Base Calculator")
 
 @pytest.fixture
 
@@ -37,15 +35,15 @@ def test_lab4_test2(base_calculator):
 # Test for Substract Function
 
 def test_lab4_substruct():
-    assert calc.subtract(1, 1) == 0
-    assert calc.subtract(1.0, 2.5) == -1.5
-    assert calc.subtract(5, 3) == 2
-    assert calc.subtract(-5, -6) == 1
+    assert base_calculator.subtract(1, 1) == 0
+    assert base_calculator.subtract(1.0, 2.5) == -1.5
+    assert base_calculator.subtract(5, 3) == 2
+    assert base_calculator.subtract(-5, -6) == 1
     
 # Test for Multiply Function    
 
 def test_lab4_multiply():
-    assert calc.multiply(5, 0) == 0
-    assert calc.multiply(3.2, 5.6) == 17.92
-    assert calc.multiply(-3, 6) == -18
-    assert calc.multiply(6.2, -9.4) == -58.28
+    assert base_calculator.multiply(5, 0) == 0
+    assert base_calculator.multiply(3.2, 5.6) == 17.92
+    assert base_calculator.multiply(-3, 6) == -18
+    assert base_calculator.multiply(6.2, -9.4) == -58.28
